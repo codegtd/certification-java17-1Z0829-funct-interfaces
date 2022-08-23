@@ -1,4 +1,4 @@
-package funcInterfacesLambdas;
+package functionalinterface;
 
 interface Functionable {
   int myFunctionValidMethod(int i1, int i2);

@@ -1,4 +1,4 @@
-package funcInterfacesLambdas;
+package functionalinterface;
 
 
 
