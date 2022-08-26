@@ -1,4 +1,4 @@
-package functionalinterfaces;
+package sam_builtin.primitives;
 
 import java.util.function.*;
 
@@ -14,15 +14,12 @@ public class DoublePrimitiveExamples {
     DoubleToIntFunction dif = (double d) -> (int) d;
     System.out.println("double | int: " + dif.applyAsInt(Math.PI));
 
-    DoubleToLongFunction dil = (double d) -> (long) d;
-    System.out.println("double | long: " + dil.applyAsLong(Math.PI));
-
     ToDoubleFunction<String> tdf = (String s) -> Double.parseDouble(s);
     System.out.println("ToDouble: " + tdf.applyAsDouble("10.98"));
 
     ToDoubleBiFunction<String, String> tdb =
          (String s, String t) -> Double.parseDouble(s) + Double.parseDouble(t);
-    System.out.println("ToDoubleBiFunction: " + tdb.applyAsDouble("10.98", "0.02"));
+    System.out.println("ToDoubleBiFunc: " + tdb.applyAsDouble("10.98", "0.02"));
 
     DoublePredicate dp = (double d) -> d == 0;
     System.out.println("Double | boolean: " + dp.test(Math.PI));
@@ -34,6 +31,10 @@ public class DoublePrimitiveExamples {
     ObjDoubleConsumer<Object> dco =
          (Object s, double d) -> System.out.println((String) s + " " + d);
     dco.accept("ObjDoubleConsumer: ", Math.PI);
+    //--------------------------------------------------------------------------
+
+    DoubleToLongFunction dil = (double d) -> (long) d;
+    System.out.println("double | long: " + dil.applyAsLong(Math.PI));
 
   }
 }

@@ -1,11 +1,11 @@
-package functionalinterface;
+package sam_basics;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
-public class SuppliedInterfaceTests {
+public class BasicExamples {
 
   public static void main(String[] args) {
 

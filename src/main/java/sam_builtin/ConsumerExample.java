@@ -1,4 +1,4 @@
-package functionalinterfaces;
+package sam_builtin;
 
 import java.util.List;
 import java.util.function.BiConsumer;

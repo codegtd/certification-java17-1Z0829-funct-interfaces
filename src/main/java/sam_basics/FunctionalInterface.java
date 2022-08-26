@@ -1,4 +1,4 @@
-package functionalinterface;
+package sam_basics;
 
 
 

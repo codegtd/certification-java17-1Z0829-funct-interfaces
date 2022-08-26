@@ -1,4 +1,4 @@
-package functionalinterface;
+package sam_basics;
 
 interface Functionable {
   int myFunctionValidMethod(int i1, int i2);
@@ -9,7 +9,7 @@ interface Functionable {
 //  int hashCode();           //JAVA.LANG.OBJECT
 }
 
-public class FunctionalTest {
+public class SamJavaLangObjects {
   public static void main(String[] args) {
     Functionable f = (s, t) -> s + t;
     System.out.println(f.myFunctionValidMethod(5, 5));

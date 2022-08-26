@@ -1,4 +1,4 @@
-package functionalinterfaces.function;
+package sam_builtin.function;
 
 import java.util.function.Function;
 
