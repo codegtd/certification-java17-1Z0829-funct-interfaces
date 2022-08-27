@@ -1,9 +1,9 @@
-package sam_builtin.function;
+package sam_builtin;
 
 import java.util.List;
 import java.util.function.Function;
 
-public class FunctionBasicsExample {
+public class FunctionExample {
   public static void main(String[] args) {
 
     Function<String, String> f1 = (s) -> s;

@@ -1,4 +1,4 @@
-package sam_builtin.function;
+package sam_builtin.andthemcompose;
 
 import java.util.function.Function;
 

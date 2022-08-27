@@ -61,7 +61,15 @@ class MyItem {
     //   - CLASH (Which method will be used):
     //     + createItem(Function<String, Item> lambda, String t)
     //     + createItem(Supplier<Item>         lambda, String t)
-    MyItem i =  create((Function<String, MyItem>)  MyItem::new, "T");     }
+
+    // 04 SOLUTIONS:
+    MyItem i =  create((Function<String, MyItem>)  MyItem::new, "T");
+           i =  create((Supplier<MyItem>)          MyItem::new, "T");
+           i =  create(functionLambda,                          "T");
+           i =  create(supplierLambda,                          "T");
+
+
+  }
 
   static MyItem create(Function<String, MyItem> lambda, String t) {
     return lambda.apply(t);                                   }

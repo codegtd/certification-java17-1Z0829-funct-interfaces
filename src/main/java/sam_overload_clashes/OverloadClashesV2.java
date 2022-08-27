@@ -40,7 +40,21 @@ class Item {
          '}';
   }
 }
+/*
+EXPLICACAO:
+a) Na Consumer, temos '1 arg + 1 metodo', logo, neste caso ignoramos o "arg" e add o 'Objeto Item',
+usando  "l -> l.add(new Item("1")"; Mesmo 'efeito' que o "Supplier";
+b) Na Predicate, temos '1 arg + 1 metodo', logo, neste caso, ignoramos  o "arg"  e add o 'Objeto Item',
+usando  "l -> l.add(new Item("1")"; Mesmo 'efeito' que o "Supplier";
 
+PROBLEMA:
+Qdo usamos:
+a) l -> l.add(new Item("1"), seja em Consumer, Predicate ou em Create, eles 'clasham', confundindo o compilador;
+
+SOLUCAO:
+- Castear o argumento no metodo 'create' com o InterfFunc desejada
+- Criar InterfFunc variables, e fornece-la como PARAM do create, nao usando lambda
+ */
 public class OverloadClashesV2 {
   public static void main(String[] args) {
     List<Item> list = new ArrayList<>();
@@ -53,18 +67,13 @@ public class OverloadClashesV2 {
 
     create(list, consumerLambda);
     create(list, predicatLambda);
-//    create(list, l -> l.add(new Item("->"));
+    create(list, (Consumer<List>) l -> l.add(new Item("->")));
+    create(list, (Predicate<List>)l -> l.add(new Item("->")));
+
+    for(var arg :list) System.out.println(arg.toString());
 
   }
 
-  private static void create(List<Item> l, Consumer<List> c) {
-
-    c.accept(l);
-  }
-
-  private static void create(List<Item> l, Predicate<List> p) {
-
-    p.test(l);
-  }
-
+  static void create(List<Item> l, Consumer<List> c) {  c.accept(l);  }
+  static void create(List<Item> l, Predicate<List> p) {  p.test(l);   }
 }
