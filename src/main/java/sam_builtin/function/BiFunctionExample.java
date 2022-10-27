@@ -1,4 +1,4 @@
-package sam_builtin;// Java Program to demonstrate
+package sam_builtin.function;// Java Program to demonstrate
 // BiFunction's apply() method
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package sam_builtin;
+package sam_builtin.predicate;
 
 import java.util.function.Predicate;
 

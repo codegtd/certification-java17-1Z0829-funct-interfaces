@@ -1,4 +1,4 @@
-package sam_builtin;
+package sam_builtin.function;
 
 import java.util.List;
 import java.util.function.Function;
